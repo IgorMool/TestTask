@@ -1,0 +1,22 @@
+body {
+    text-align: center;
+}
+input[type="number"] {
+    width: 40px;
+}
+button[type='submit'] {
+    background: #009f00;
+    border: none;
+    padding: 10px 35px;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 6px;
+}
+h2 {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+.hidden {
+    display: none;
+}

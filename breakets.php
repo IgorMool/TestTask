@@ -31,7 +31,7 @@ function check_bracket($bracket, &$stack): bool {
             array_unshift($stack, $bracket);
             break;
         default:
-            if (empty($stack) || !is_brackets_pair($bracket, array_shift($stack))) {
+            if (empty($stack) || !is_brackets_pair(array_shift($stack), $bracket)) {
                 return false;
             }
             break;
@@ -39,10 +39,10 @@ function check_bracket($bracket, &$stack): bool {
     return true;
 }
 
-function is_brackets_pair($right_bracket, $left_bracket): bool {
-    if (($right_bracket == ')' && $left_bracket != '(') ||
-            ($right_bracket == ']' && $left_bracket != '[') ||
-            ($right_bracket == '}' && $left_bracket != '{')) {
+function is_brackets_pair($left_bracket, $right_bracket): bool {
+    if (($left_bracket != '(' && $right_bracket == ')') ||
+            ($left_bracket != '[' && $right_bracket == ']') ||
+            ($left_bracket != '{' && $right_bracket == '}' )) {
         return false;
     }
     return true;

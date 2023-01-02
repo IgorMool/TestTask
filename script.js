@@ -8,11 +8,11 @@ applicantForm.addEventListener('submit', (event) => {
     let b = document.getElementById('b').value;
     let c = document.getElementById('c').value;
 
-    document.getElementById('result').textContent = solve_and_show_result(a, b, c);
+    document.getElementById('result').textContent = solve(a, b, c);
     document.getElementById('result-header').classList.toggle('hidden');
 });
 
-function solve_and_show_result(a, b, c) {
+function solve(a, b, c) {
     if (a === 0){
         return "Error, 'а' cannot be zero!";
     }
